@@ -8,7 +8,25 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-<h1>Hello</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Created At</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <td>{{ user.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
 
 
